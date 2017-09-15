@@ -1,8 +1,14 @@
-1a. 
+1a. One possible issue with a time-sharing computer environment is memory access and security. If not properly regulated, various user may overwrite each other in memory. Another issue with a time-sharing computer environment, is the allocation of shared system resources. Without a system in place to handle load balancing, certain users may be left to idle for an inconvenient amount of time.
+
+1b. It is possible to ensure the same degree of security in a time-shared system as in a dedicated machine. As with a dedicated machine an operating system can govern the users of a time-shared system and ensure that users are allocated proper resources without overlap or inconvenience of any user. 
 
 2. An interrupt is the signal emitted at a hardware level on a processor in order for anything to happen. The purpose of an interrupt is to get certain parts of the processor to perform certain tasks. An interrupt is different than a trap because a trap comes from the software level. Traps are most commonly used to switch the processor mode from “user” to “kernel.” Because of this, user programs are unable to generate traps.
 
-3. 
+3a. The CPU will initiate a transfer between a user process and the DMA controller. After starting the transfer the CPU will move on to executing another process instead of waiting.
+
+3b. The processor recieves an interrupt from the DMA controller when the memory transfer is complete.
+
+3c. The process does not interfere with the execution of the user process because with DMA the CPU is allowed to continue executing instructions and running other programs while the read/write memory transfer of I/O is underway, rather than waiting for the transfer before continuing. 
 
 4. One mechanism for enforcing memory protection is restricting user processes to only be allowed to write to memory in their address space. The address space is determined by the operating system and kept track of in two registers on the processor. When the kernel gives control to a user process it loads two addresses onto the processor. The addresses are stored in a “base” and “limit” register and these addresses dictate where a user process is allowed to write in memory.
 
@@ -13,4 +19,4 @@
 	Mask interrupts: kernel
 	Modify entries in device-status table: kernel
 	Switch from user to kernel: kernel
-	Access: user
+Access: user
